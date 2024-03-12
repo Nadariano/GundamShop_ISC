@@ -236,9 +236,9 @@ public class ProductController extends HttpServlet {
 //                                request.getRequestDispatcher("/product/transaction_success.do").forward(request, response);
                                 String vnp_Version = "2.0.0";
                                 String vnp_Command = "pay";
-                                String vnp_OrderInfo = "Thanh toan don hang" + order.getOrder_id();
-                                String orderType = "billpayment";
                                 String vnp_TxnRef = Config.getRandomNumber(8);
+                                String vnp_OrderInfo = "Thanh toan don hang " + vnp_TxnRef;
+                                String orderType = "billpayment";
                                 String vnp_IpAddr = Config.getIpAddress(request);
                                 String vnp_TmnCode = Config.vnp_TmnCode;
 
