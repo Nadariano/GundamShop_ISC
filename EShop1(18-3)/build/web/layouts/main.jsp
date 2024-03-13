@@ -153,7 +153,7 @@
                 <div class="row ">
                     <div class="col">
                         <div id="sidebar" class="span3">
-                            <div class="well well-small"><a id="myCart" href="<c:url value="/product/product_summary.do"/>"><img src="<c:url value="/themes/images/ico-cart.png"/>" alt="cart">(${sessionScope.cart.count}) sản phẩm<span class="badge badge-warning pull-right">$${sessionScope.cart.total}</span></a></div>
+                            <div class="well well-small"><a id="myCart" href="<c:url value="/product/product_summary.do"/>"><img src="<c:url value="/themes/images/ico-cart.png"/>" alt="cart">(${sessionScope.cart.count}) sản phẩm<span class="badge badge-warning pull-right">${sessionScope.cart.total}K</span></a></div>
 
                             <ul id="sideManu " class="nav nav-tabs nav-stacked">
                                 <li class="subMenu open"><a>Loại</a>

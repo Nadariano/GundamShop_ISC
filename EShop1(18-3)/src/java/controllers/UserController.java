@@ -5,6 +5,7 @@
  */
 package controllers;
 
+import Utils.Utilities;
 import db.User;
 import db.UserFacade;
 import java.io.IOException;
@@ -98,10 +99,10 @@ public class UserController extends HttpServlet {
             case "login":
                 try {
                     String email = request.getParameter("email");
-                    String password = request.getParameter("accountPass");
+                    String hashedpassword = Utilities.hash(request.getParameter("accountPass"));
                     String remember = request.getParameter("remember");
                     UserFacade uf = new UserFacade();
-                    User user = uf.login(email, password);
+                    User user = uf.login(email, hashedpassword);
                     if (user != null) {
                         //Neu login thanh cong:
                         //Luu user vao session
@@ -164,7 +165,8 @@ public class UserController extends HttpServlet {
                                 request.setAttribute("error", "Mật khẩu không trùng khớp!");
                                 request.getRequestDispatcher("/user/register.do").forward(request, response);
                             } else {
-                                User newUser = uf.register(email, accountpass, accountname, accountphone, accountaddress);
+                                String hashedpassword = Utilities.hash(accountpass);
+                                User newUser = uf.register(email, hashedpassword, accountname, accountphone, accountaddress);
                                 HttpSession session = request.getSession();
                                 session.setAttribute("User", newUser);
                                 request.setAttribute("message", "Đăng ký thành công! Vui lòng đăng nhập để tiếp tục thao tác.");
@@ -228,7 +230,8 @@ public class UserController extends HttpServlet {
                             request.setAttribute("message1", "Mật khẩu không trùng khớp!");
                             request.getRequestDispatcher("/user/forgetpass.do").forward(request, response);
                         } else {
-                            user = uf.changepassword(accountpass, user.getEmail());
+                            String hashedpassword = Utilities.hash(accountpass);
+                            user = uf.changepassword(hashedpassword, user.getEmail());
                             request.setAttribute("message", "Đổi mật khẩu thành công!vui lòng đăng nhập lại");
                             request.getRequestDispatcher("/user/login.do").forward(request, response);
                         }

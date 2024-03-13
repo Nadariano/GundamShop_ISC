@@ -23,7 +23,7 @@
                     <small></small>
                     <hr class="soft"/>
                     <div class="control-group">
-                        <label class="control-label"><span>&dollar;${product.price}</span></label>
+                        <label class="control-label"><span>${product.price}K</span></label>
                         <div class="controls">
                             <a class="btn btn-large btn-primary pull-right" href="<c:url value="/product/product_summary.do?op=add&product_id=${product.product_id}"/>">Thêm vào
                                 <i class="icon-shopping-cart"></i>

@@ -63,7 +63,7 @@
                                     </div>
                                     <div class="span2 alignR">
                                         <form class="form-horizontal qtyFrm">
-                                            <h3>&dollar;${product.price}</h3>
+                                            <h3>${product.price}K</h3>
                                             <a href="<c:url value="/product/product_summary.do?op=add&product_id=${product.product_id}"/>" class="btn btn-large btn-primary"> Thêm vào <i class=" icon-shopping-cart"></i></a>
                                             <a href="<c:url value="/product/product_details.do?productId=${product.product_id}"/>" class="btn btn-large"><i class="icon-zoom-in"></i></a>
 
@@ -94,7 +94,7 @@
                                             <a class="btn" href="<c:url value="/product/product_summary.do?op=add&product_id=${product.product_id}"/>">Thêm vào
                                                 <i class="icon-shopping-cart"></i>
                                             </a> 
-                                            <a class="btn btn-primary">&dollar;${product.price}</a>
+                                            <a class="btn btn-primary">${product.price}K</a>
                                         </h4>
                                     </div>
                                 </li>

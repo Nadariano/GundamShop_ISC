@@ -27,7 +27,7 @@
                                                 </a> 
                                                 <a class="btn" href="<c:url value="/product/product_summary.do?op=add&product_id=${product.product_id}"/>">Thêm vào
                                                     <i class="icon-shopping-cart"></i>
-                                                </a> <a class="btn btn-primary">&dollar;${product.price}</a></h4>
+                                                </a> <a class="btn btn-primary">${product.price}K</a></h4>
                                         </div>
                                     </li>
                                 </c:forEach>
@@ -50,7 +50,7 @@
                                                 </a> 
                                                 <a class="btn" href="<c:url value="/product/product_summary.do?op=add&product_id=${product.product_id}"/>">Thêm vào
                                                     <i class="icon-shopping-cart"></i>
-                                                </a> <a class="btn btn-primary" >&dollar;${product.price}</a></h4>
+                                                </a> <a class="btn btn-primary" >${product.price}K</a></h4>
                                         </div>
                                     </li>
                                 </c:forEach>
@@ -74,7 +74,7 @@
                                                 </a> 
                                                 <a class="btn" href="<c:url value="/product/product_summary.do?op=add&product_id=${product.product_id}"/>">Thêm vào
                                                     <i class="icon-shopping-cart"></i>
-                                                </a> <a class="btn btn-primary">&dollar;${product.price}</a></h4>
+                                                </a> <a class="btn btn-primary">${product.price}K</a></h4>
                                         </div>
                                     </li>
                                 </c:forEach>
@@ -98,7 +98,7 @@
                                                 </a> 
                                                 <a class="btn" href="<c:url value="/product/product_summary.do?op=add&product_id=${product.product_id}"/>">Thêm vào
                                                     <i class="icon-shopping-cart"></i>
-                                                </a> <a class="btn btn-primary" >&dollar;${product.price}</a></h4>
+                                                </a> <a class="btn btn-primary" >${product.price}K</a></h4>
                                         </div>
                                     </li>
                                 </c:forEach>
@@ -135,7 +135,7 @@
                                                 </a> 
                                                 <a class="btn" href="<c:url value="/product/product_summary.do?op=add&product_id=${product.product_id}"/>">Thêm vào
                                                     <i class="icon-shopping-cart"></i>
-                                                </a> <a class="btn btn-primary">&dollar;${product.price}</a></h4>
+                                                </a> <a class="btn btn-primary">${product.price}K</a></h4>
                                         </div>
                                     </li>
                                 </c:forEach>
@@ -158,7 +158,7 @@
                                                 </a> 
                                                 <a class="btn" href="<c:url value="/product/product_summary.do?op=add&product_id=${product.product_id}"/>">Thêm vào
                                                     <i class="icon-shopping-cart"></i>
-                                                </a> <a class="btn btn-primary">&dollar;${product.price}</a></h4>
+                                                </a> <a class="btn btn-primary">${product.price}K</a></h4>
                                         </div>
                                     </li>
                                 </c:forEach>
@@ -182,7 +182,7 @@
                                                 </a> 
                                                 <a class="btn" href="<c:url value="/product/product_summary.do?op=add&product_id=${product.product_id}"/>">Thêm vào
                                                     <i class="icon-shopping-cart"></i>
-                                                </a> <a class="btn btn-primary">&dollar;${product.price}</a></h4>
+                                                </a> <a class="btn btn-primary">${product.price}K</a></h4>
                                         </div>
                                     </li>
                                 </c:forEach>
@@ -206,7 +206,7 @@
                                                 </a> 
                                                 <a class="btn" href="<c:url value="/product/product_summary.do?op=add&product_id=${product.product_id}"/>">Thêm vào
                                                     <i class="icon-shopping-cart"></i>
-                                                </a> <a class="btn btn-primary">&dollar;${product.price}</a></h4>
+                                                </a> <a class="btn btn-primary">${product.price}K</a></h4>
                                         </div>
                                     </li>
                                 </c:forEach>

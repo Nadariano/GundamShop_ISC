@@ -229,10 +229,10 @@ public class ProductController extends HttpServlet {
                                 List<OrderDetail> odList;
                                 odList = of.readAllProducts(order_id);
                                 session.setAttribute("discount", null);
-                                request.setAttribute("orderId", order_id);
-                                request.setAttribute("order", order);
-                                request.setAttribute("odList", odList);
-                                request.setAttribute("message", "Đơn hàng của bạn đã được xử lý!");
+                                session.setAttribute("orderId", order_id);
+                                session.setAttribute("order", order);
+                                session.setAttribute("odList", odList);
+                                session.setAttribute("message", "Đơn hàng của bạn đã được xử lý!");
 //                                request.getRequestDispatcher("/product/transaction_success.do").forward(request, response);
                                 String vnp_Version = "2.0.0";
                                 String vnp_Command = "pay";
@@ -244,6 +244,8 @@ public class ProductController extends HttpServlet {
 
                                 int amount = (int) (Math.round(order.getTotalMoney()) * 25000);
                                 Map<String, String> vnp_Params = new HashMap<>();
+//                                vnp_Params.put("vnp_message", "Đơn hàng của bạn đã được xử lý!");
+
                                 vnp_Params.put("vnp_Version", vnp_Version);
                                 vnp_Params.put("vnp_Command", vnp_Command);
                                 vnp_Params.put("vnp_TmnCode", vnp_TmnCode);
@@ -347,6 +349,10 @@ public class ProductController extends HttpServlet {
             //!!Trang thong bao mua hang thanh cong
             case "transaction_success":
                 request.getRequestDispatcher("/layouts/main.jsp").forward(request, response);
+                session.removeAttribute("orderId");
+                session.removeAttribute("order");
+                session.removeAttribute("odList");
+                session.removeAttribute("message");
                 break;
 
             case "products":

@@ -51,8 +51,8 @@
                             <th>Mã sản phẩm</th>
                             <th >Tên sản phẩm</th>
                             <th width="150px">Số lượng</th>
-                            <th>Đơn giá  (&dollar;)</th>
-                            <th>Thành tiền  (&dollar;)</th>
+                            <th>Đơn giá  (K)</th>
+                            <th>Thành tiền  (K)</th>
                         </tr>
                     </thead>
                     <tbody>

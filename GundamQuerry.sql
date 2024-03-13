@@ -70,7 +70,7 @@ create table ACCOUNT
 (
   ACCOUNT_ID INT identity(1,1) NOT NULL,
   EMAIL VARCHAR(50) NOT NULL,
-  ACCOUNTPASS VARCHAR(50) NOT NULL,
+  ACCOUNTPASS VARCHAR(MAX) NOT NULL,
   ACCOUNT_NAME NVARCHAR(MAX) NOT NULL,
   ACCOUNT_PHONE VARCHAR(20) NOT NULL,
   ACCOUNT_ADDRESS NVARCHAR(MAX) NOT NULL,
@@ -1017,17 +1017,18 @@ Người chơi sẽ thỏa sức sáng tạo và đam mê.',
 N'Nhựa',
 'MG',
 '1')
-/*data for account*/
-INSERT INTO ACCOUNT VALUES ( 'son@gmail.com', '12345', N'Võ Nguyễn Trung Sơn', '0945076586', N'1 Bis, Hùng Vương, TP Hồ Chí Minh', 1 )
-INSERT INTO ACCOUNT VALUES ( 'hai@gmail.com', '12345', N'Võ Nguyễn Trung Hải', '0909564749', N'2 Bis, Hùng Vương, TP Hồ Chí Minh', 1 )
-INSERT INTO ACCOUNT VALUES ( 'tri@gmail.com', '12345', N'Lương Minh Trí', '0745363898', N'3 Bis, Hùng Vương, TP Hồ Chí Minh', 1 )
-INSERT INTO ACCOUNT VALUES ( 'minh@gmail.com', '12345', N'Phạm Trần Hoàng Minh', '0858989432', N'4 Bis, Hùng Vương, TP Hồ Chí Minh', 1 )
-INSERT INTO ACCOUNT VALUES ( 'duy@gmail.com', '12345', N'Nguyễn Anh Duy', '07564888789', N'5 Bis, Hùng Vương, TP Hồ Chí Minh', 1 )
-INSERT INTO ACCOUNT VALUES ( 'a@gmail.com', '54321', N'Nguyễn Văn A', '0923456789', N'1B, Trần Hưng Đạo, TP Đà Nẵng', 0 )
-INSERT INTO ACCOUNT VALUES ( 'b@gmail.com', '54321', N'Nguyễn Văn B', '0564384568', N'2B, Trần Hưng Đạo, TP Đà Nẵng', 0 )
-INSERT INTO ACCOUNT VALUES ( 'c@gmail.com', '54321', N'Nguyễn Văn C', '0707684439', N'3B, Trần Hưng Đạo, TP Đà Nẵng', 0 )
-INSERT INTO ACCOUNT VALUES ( 'd@gmail.com', '54321', N'Nguyễn Văn D', '0909547387', N'4B, Trần Hưng Đạo, TP Đà Nẵng', 0 )
-INSERT INTO ACCOUNT VALUES ( 'e@gmail.com', '54321', N'Nguyễn Văn E', '0808546287', N'5B, Trần Hưng Đạo, TP Đà Nẵng', 0 )
+/*data for account admin:12345, user:54321*/
+INSERT INTO ACCOUNT VALUES ( 'son@gmail.com', '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5', N'Võ Nguyễn Trung Sơn', '0945076586', N'1 Bis, Hùng Vương, TP Hồ Chí Minh', 1 )
+INSERT INTO ACCOUNT VALUES ( 'hai@gmail.com', '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5', N'Võ Nguyễn Trung Hải', '0909564749', N'2 Bis, Hùng Vương, TP Hồ Chí Minh', 1 )
+INSERT INTO ACCOUNT VALUES ( 'minh@gmail.com', '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5', N'Phạm Trần Hoàng Minh', '0858989432', N'4 Bis, Hùng Vương, TP Hồ Chí Minh', 1 )
+INSERT INTO ACCOUNT VALUES ( 'tri@gmail.com', '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5', N'Lương Minh Trí', '0745363898', N'3 Bis, Hùng Vương, TP Hồ Chí Minh', 1 )
+INSERT INTO ACCOUNT VALUES ( 'duy@gmail.com', '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5', N'Nguyễn Anh Duy', '07564888789', N'5 Bis, Hùng Vương, TP Hồ Chí Minh', 1 )
+
+INSERT INTO ACCOUNT VALUES ( 'a@gmail.com', '20f3765880a5c269b747e1e906054a4b4a3a991259f1e16b5dde4742cec2319a', N'Nguyễn Văn A', '0923456789', N'1B, Trần Hưng Đạo, TP Đà Nẵng', 0 )
+INSERT INTO ACCOUNT VALUES ( 'b@gmail.com', '20f3765880a5c269b747e1e906054a4b4a3a991259f1e16b5dde4742cec2319a', N'Nguyễn Văn B', '0564384568', N'2B, Trần Hưng Đạo, TP Đà Nẵng', 0 )
+INSERT INTO ACCOUNT VALUES ( 'c@gmail.com', '20f3765880a5c269b747e1e906054a4b4a3a991259f1e16b5dde4742cec2319a', N'Nguyễn Văn C', '0707684439', N'3B, Trần Hưng Đạo, TP Đà Nẵng', 0 )
+INSERT INTO ACCOUNT VALUES ( 'd@gmail.com', '20f3765880a5c269b747e1e906054a4b4a3a991259f1e16b5dde4742cec2319a', N'Nguyễn Văn D', '0909547387', N'4B, Trần Hưng Đạo, TP Đà Nẵng', 0 )
+INSERT INTO ACCOUNT VALUES ( 'e@gmail.com', '20f3765880a5c269b747e1e906054a4b4a3a991259f1e16b5dde4742cec2319a', N'Nguyễn Văn E', '0808546287', N'5B, Trần Hưng Đạo, TP Đà Nẵng', 0 )
 
 INSERT INTO DISCOUNT VALUES ( 'ss10', '10')
 INSERT INTO DISCOUNT VALUES ( 'ss20', '20')
