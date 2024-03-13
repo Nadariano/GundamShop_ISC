@@ -65,26 +65,7 @@
                     </form>
                     <ul id="topMenu" class="nav pull-right">
 
-                        <a href="#pop-up" role="button" data-toggle="modal" style="padding-right:0"><span class="btn btn-large btn-success hide ">Đăng nhập</span></a>
-                        <div id="pop-up" class="modal hide fade in " tabindex="-1" role="dialog" aria-labelledby="pop-up" aria-hidden="false">
-                            <h3>Check this shit out</h3>
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 
-                            </div>
-                            <div class="modal-body">
-<!--                                <form class="form-horizontal loginFrm"action="<c:url value="/user/login_handler.do"/>">
-                                    <div class="control-group">								
-                                        <input type="email" id="email" name="email" placeholder="Email">
-                                    </div>
-                                    <div class="control-group">
-                                        <input type="password" id="accountPass" name="accountPass" placeholder="Password">
-                                    </div>
-                                    <button type="submit" name="op" value="login" class="btn  btn-success">Đăng nhập</button> <a href="<c:url value="/user/forgetpass.do"/>">Quên mật khẩu?</a>
-                                </form>		-->
-                                <!--<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>-->
-                            </div>
-                        </div>
 
                         <li class=""><a href="<c:url value="/product/products.do?op=productAll"/>">Sản phẩm</a></li>
                         <li class=""><a href="<c:url value="/home/contact.do" />">Liên hệ</a></li>
@@ -243,6 +224,7 @@
                 </div> 
             </div>
             <p class="pull-right">&copy; GundamShop</p>
+
         </div><!-- Container End -->
     </div>
 
@@ -256,10 +238,48 @@
 
 
     <script src="<c:url value="/themes/js/myjs.js"/>" type="text/javascript"></script>
+
     <script>
+        // Global variable to store the selected ad
         $(document).ready(function () {
+            var ads = [
+                {"type_id": "SD", "url": "<c:url value='/product/products.do?op=productByType&type_id=SD'/>", "image_src": "GundamImages/sd_ad.png"},
+                {"type_id": "MG", "url": "<c:url value='/product/products.do?op=productByType&type_id=MG'/>", "image_src": "GundamImages/mg_ad.png"},
+                {"type_id": "HG", "url": "<c:url value='/product/products.do?op=productByType&type_id=HG'/>", "image_src": "GundamImages/hg_ad.png"},
+                {"type_id": "RG", "url": "<c:url value='/product/products.do?op=productByType&type_id=RG'/>", "image_src": "GundamImages/rg_ad.png"}
+            ];
+
+            // Encapsulate the ad selection logic in a closure
+            var getAd = (function () {
+                var ad;
+                return function () {
+                    if (!ad) {
+                        ad = ads[Math.floor(Math.random() * ads.length)];
+                    }
+                    return ad;
+                };
+            })();
+
+            // Use the getAd function to get the selected ad
+            var ad = getAd();
+            $('#adLink').attr('href', ad.url);
+            $('#adImage').attr('src', ad.image_src);
+
             $('#pop-up').modal('show');
+
+            $('.closeModalOnly').on('click', function (e) {
+                e.stopPropagation(); // Prevent the click event from bubbling up to the backdrop
+                $('#pop-up').modal('hide');
+                $('#modalBackdrop').hide();
+            });
+
+            $('#modalBackdrop').on('click', function (e) {
+                window.location.href = $('#adLink').attr('href');
+            });
         });
+
+
     </script>
+
 </body>
 </html>

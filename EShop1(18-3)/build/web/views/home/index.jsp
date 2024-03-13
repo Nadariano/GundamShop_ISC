@@ -4,6 +4,24 @@
 <html lang="en">
     <!--    <div id="mainBody">
             <div class="container">-->
+    <div>
+        <div id="adLink">
+            <div id="modalBackdrop" class="modal-backdrop show">
+                <div id="pop-up" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="pop-up" aria-hidden="false" data-backdrop="" data-keyboard="false" style="width: 60%; height: 60%; margin: auto; position: absolute; top: 0; left: 0; bottom: 0; right: 0;">
+                    <button type="button" class="close closeModalOnly" data-dismiss="modal" aria-hidden="true" style="color: #149bdf">×</button>
+                    <h3>Check this out</h3>
+                    <div class="modal-body" style="width: auto; height: 100%;">
+                        <a id="adLink">
+                            <img id="adImage" alt="Advertisement" style="width:auto; height: 100%; object-fit: contain;"/>
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
     <div class="span9">		
         <div class="well well-small">
             <h4>Đặc sắc<small class="pull-right">(Đắt nhất mỗi loại)</small></h4>
